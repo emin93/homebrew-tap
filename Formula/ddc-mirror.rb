@@ -3,19 +3,19 @@
 
 # Formula for ddc-mirror.
 class DdcMirror < Formula
-  desc "Mirror built-in display brightness to external DDC/CI monitors"
-  homepage "https://github.com/emin93/ddc-mirror"
-  url "https://github.com/emin93/ddc-mirror/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "25014dec4954242e96401962e3ed3ef4112c761cbb27bcae62099ad8ec13b7bb"
+  desc "Sync built-in MacBook brightness to all external displays"
+  homepage "https://ddc-mirror.emin.ch"
+  url "https://github.com/emin93/ddc-mirror/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "dddf3e359fd6fabd7cf69f21d04a96ae0ad2d1b154a7ff9b32e645fc6799da51"
   license "MIT"
   head "https://github.com/emin93/ddc-mirror.git", branch: "main"
 
-  depends_on xcode: ["15.0", :build]
   depends_on :macos
+  depends_on arch: :arm64
 
   def install
-    system "swift", "build", "-c", "release", "--disable-sandbox"
-    bin.install ".build/release/ddc-mirror"
+    system "make"
+    bin.install "ddc-mirror"
   end
 
   service do
@@ -23,7 +23,6 @@ class DdcMirror < Formula
     keep_alive true
     log_path var/"log/ddc-mirror.log"
     error_log_path var/"log/ddc-mirror.log"
-    environment_variables PATH: "#{HOMEBREW_PREFIX}/bin:/usr/bin:/bin:/usr/sbin:/sbin"
   end
 
   test do
