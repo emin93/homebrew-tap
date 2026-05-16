@@ -5,8 +5,8 @@
 class DdcMirror < Formula
   desc "Mirror built-in display brightness to external DDC/CI monitors"
   homepage "https://github.com/emin93/ddc-mirror"
-  url "https://github.com/emin93/ddc-mirror/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "eed69c56e867b695eedb356336ec8ed4cf77ef7e9062fdb95e7c963e391b4974"
+  url "https://github.com/emin93/ddc-mirror/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "f2b5d36124d17f30be806a102fa6510d7c2143d779b4e2cd49e6675c287b9375"
   license "MIT"
   head "https://github.com/emin93/ddc-mirror.git", branch: "main"
 
