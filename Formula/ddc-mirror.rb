@@ -11,7 +11,6 @@ class DdcMirror < Formula
   head "https://github.com/emin93/ddc-mirror.git", branch: "main"
 
   depends_on xcode: ["15.0", :build]
-  depends_on "m1ddc"
   depends_on :macos
 
   def install
