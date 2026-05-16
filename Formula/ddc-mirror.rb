@@ -5,8 +5,8 @@
 class DdcMirror < Formula
   desc "Sync built-in MacBook brightness to all external displays"
   homepage "https://ddc-mirror.emin.ch"
-  url "https://github.com/emin93/ddc-mirror/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "85145a793a1c7c857c96c6e8662f9a5b8af8b9bf10f7423f657e73707339f634"
+  url "https://github.com/emin93/ddc-mirror/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "1c79a75e25542ef4f0c15b1d87f2d07addbae3d33ab2e3dc0e3daabbc741ea64"
   license "MIT"
   head "https://github.com/emin93/ddc-mirror.git", branch: "main"
 
