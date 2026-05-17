@@ -5,8 +5,8 @@
 class DdcMirror < Formula
   desc "Smartly sync built-in MacBook brightness to external displays"
   homepage "https://ddc-mirror.emin.ch"
-  url "https://github.com/emin93/ddc-mirror/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "46f66d28bdd933cfe1abdb7e89a0001049439776f8ec8f06adcb706bd1b49acf"
+  url "https://github.com/emin93/ddc-mirror/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "25425c013ac20cb540fd439be71484f24c5c9160215773f5b3174af8e7471747"
   license "MIT"
   head "https://github.com/emin93/ddc-mirror.git", branch: "main"
 
@@ -33,6 +33,10 @@ class DdcMirror < Formula
 
       Or run it once in the foreground:
         ddc-mirror
+
+      Optional external display calibration:
+        defaults write ch.emin.ddc-mirror externalBrightnessOffset -float 0.10
+        brew services restart ddc-mirror
 
       That's it. There is no step two.
     EOS
